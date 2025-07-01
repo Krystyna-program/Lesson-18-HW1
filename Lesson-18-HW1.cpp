@@ -10,10 +10,11 @@ int main()
 
     for (int i = 0; i < SIZE; i++)
     {
-        cout << "--- Enter data for employee #" << (i + 1) << " ---\n";
+        cout << "--- Employee #" << (i + 1) << " ---\n";
 
         cout << "Enter last name: ";
-        cin.getline(arr[i].lastName, 100);
+        cin >> arr[i].lastName;
+        cin.ignore(1000, '\n');
 
         cout << "Enter year of birth: ";
         cin >> arr[i].yearOfBirth;
@@ -37,11 +38,11 @@ int main()
         {
             countOlderThan60++;
             cout << "\nEmployee #" << (i + 1) << ":\n";
-            cout << "Last name: " << arr[i].lastName << "\n";
-            cout << "Year of birth: " << arr[i].yearOfBirth << "\n";
-            cout << "Age: " << age << "\n";
-            cout << "Position: " << arr[i].position << "\n";
-            cout << "Salary: " << arr[i].salary << "\n";
+            cout << "Last name: " << arr[i].lastName << "; ";
+            cout << "Year of birth: " << arr[i].yearOfBirth << "; ";
+            cout << "Age: " << age << "; ";
+            cout << "Position: " << arr[i].position << "; ";
+            cout << "Salary: " << arr[i].salary << "; ";
             cout << "Education: " << arr[i].education << "\n";
         }
     }
